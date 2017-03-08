@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Magic 8-ball!</title>
+  </head>
+
+  <body>
+    <h1>Magic 8-ball!</h1>
+
+    <% if @error %>
+      <h3>Error! <%= @error %></h3>
+    <% end %>
+
+    <p>Enter a question and then click the link below to get an answer from the Magic 8-ball:</p>
+    <form action="/answer" method="post">
+      <label for="question">Question</label>
+      <input type="text" name="question" id="question" />
+      <input type="submit" name="submit" value="Submit" />
+    </form>
+
+  </body>
+</html>
